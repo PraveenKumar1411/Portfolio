@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="robots"
+    content="noindex"
+  />
+
+  <title>404 | Praveen Kumar</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+
+      background: #0a0a0a;
+
+      color: #ffffff;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      overflow: hidden;
+    }
+
+
+    /* =========================================
+       MAIN
+    ========================================= */
+
+    .error-page {
+      position: relative;
+
+      min-height: 100vh;
+
+      padding: 40px 46px 35px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+    }
+
+
+    /* =========================================
+       HEADER
+    ========================================= */
+
+    .error-header {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      color: rgba(255, 255, 255, 0.35);
+
+      font-size: 10px;
+
+      font-weight: 600;
+
+      letter-spacing: 0.14em;
+    }
+
+
+    /* =========================================
+       MAIN CONTENT
+    ========================================= */
+
+    .error-content {
+      width: min(1000px, 90vw);
+
+      margin: auto;
+    }
+
+
+    .error-eyebrow {
+      margin-bottom: 25px;
+
+      color: rgba(255, 255, 255, 0.35);
+
+      font-size: 11px;
+
+      font-weight: 600;
+
+      letter-spacing: 0.18em;
+    }
+
+
+    /* =========================================
+       404 NUMBER
+    ========================================= */
+
+    .error-number {
+      font-size: clamp(150px, 25vw, 360px);
+
+      line-height: 0.75;
+
+      letter-spacing: -0.09em;
+
+      font-weight: 700;
+    }
+
+
+    .error-number span {
+      color: #5c5c5c;
+    }
+
+
+    /* =========================================
+       MESSAGE
+    ========================================= */
+
+    .error-message {
+      max-width: 440px;
+
+      margin-top: 50px;
+
+      color: rgba(255, 255, 255, 0.42);
+
+      font-size: 15px;
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================================
+       HOME BUTTON
+    ========================================= */
+
+    .home-button {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 25px;
+
+      margin-top: 35px;
+
+      padding: 14px 19px;
+
+      border: 1px solid
+        rgba(255, 255, 255, 0.18);
+
+      color: rgba(255, 255, 255, 0.75);
+
+      text-decoration: none;
+
+      font-size: 10px;
+
+      font-weight: 600;
+
+      letter-spacing: 0.14em;
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        padding 0.3s ease;
+    }
+
+
+    .home-button:hover {
+      background: #ffffff;
+
+      color: #0a0a0a;
+
+      padding-left: 24px;
+
+      padding-right: 24px;
+    }
+
+
+    .home-arrow {
+      font-size: 16px;
+
+      transition:
+        transform 0.3s ease;
+    }
+
+
+    .home-button:hover .home-arrow {
+      transform: translate(4px, -4px);
+    }
+
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    .error-footer {
+      display: flex;
+
+      justify-content: space-between;
+
+      color: rgba(255, 255, 255, 0.3);
+
+      font-size: 9px;
+
+      font-weight: 600;
+
+      letter-spacing: 0.12em;
+    }
+
+
+    /* =========================================
+       BACKGROUND
+    ========================================= */
+
+    .background-number {
+      position: absolute;
+
+      right: -30px;
+
+      bottom: -100px;
+
+      font-size: 420px;
+
+      line-height: 1;
+
+      font-weight: 700;
+
+      letter-spacing: -0.1em;
+
+      color: rgba(255, 255, 255, 0.025);
+
+      pointer-events: none;
+
+      user-select: none;
+
+      z-index: 0;
+    }
+
+
+    .error-content,
+    .error-header,
+    .error-footer {
+      position: relative;
+
+      z-index: 1;
+    }
+
+
+    /* =========================================
+       MOBILE
+    ========================================= */
+
+    @media (max-width: 900px) {
+
+      .error-page {
+        padding: 30px 22px 35px;
+      }
+
+
+      .error-header {
+        font-size: 8px;
+      }
+
+
+      .error-number {
+        font-size: 48vw;
+      }
+
+
+      .error-message {
+        max-width: 320px;
+
+        margin-top: 35px;
+
+        font-size: 14px;
+      }
+
+
+      .background-number {
+        right: -20px;
+
+        bottom: -20px;
+
+        font-size: 230px;
+      }
+
+
+      .error-footer {
+        font-size: 7px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <main class="error-page">
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="error-header">
+
+      <span>
+        PRAVEEN / 404
+      </span>
+
+      <span>
+        PAGE NOT FOUND
+      </span>
+
+    </header>
+
+
+    <!-- =====================================
+         BACKGROUND NUMBER
+    ====================================== -->
+
+    <div
+      class="background-number"
+      aria-hidden="true"
+    >
+      404
+    </div>
+
+
+    <!-- =====================================
+         CONTENT
+    ====================================== -->
+
+    <section class="error-content">
+
+      <p class="error-eyebrow">
+        ERROR / DESTINATION NOT FOUND
+      </p>
+
+
+      <h1 class="error-number">
+        4<span>0</span>4
+      </h1>
+
+
+      <p class="error-message">
+        The page you're looking for doesn't
+        exist or may have been moved.
+      </p>
+
+
+      <a
+        href="/Portfolio/"
+        class="home-button"
+      >
+
+        <span>
+          BACK TO HOME
+        </span>
+
+        <span class="home-arrow">
+          ↗
+        </span>
+
+      </a>
+
+    </section>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="error-footer">
+
+      <span>
+        PRAVEEN KUMAR
+      </span>
+
+      <span>
+        RETURN TO ORIGIN
+      </span>
+
+    </footer>
+
+
+  </main>
+
+</body>
+
+</html>
