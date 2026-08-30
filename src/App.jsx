@@ -7,63 +7,25 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Cursor from './components/Cursor'
 import ScrollProgress from './components/ScrollProgress'
+import NotFound from './components/NotFound'
 
 function App() {
-  const [cursor, setCursor] = useState({
-    x: 0,
-    y: 0,
-  })
-
-  const [cursorActive, setCursorActive] = useState(false)
 
   const [showHome, setShowHome] = useState(false)
 
 
   /* =========================================
-     GLOBAL CURSOR
+     CHECK CURRENT PATH
   ========================================= */
 
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      setCursor({
-        x: event.clientX,
-        y: event.clientY,
-      })
-    }
+  const basePath = import.meta.env.BASE_URL
 
+  const currentPath =
+    window.location.pathname
 
-    const handleMouseOver = (event) => {
-      const target = event.target.closest(
-        'a, button, .project-item, .capability-item'
-      )
-
-      setCursorActive(Boolean(target))
-    }
-
-
-    window.addEventListener(
-      'mousemove',
-      handleMouseMove
-    )
-
-    window.addEventListener(
-      'mouseover',
-      handleMouseOver
-    )
-
-
-    return () => {
-      window.removeEventListener(
-        'mousemove',
-        handleMouseMove
-      )
-
-      window.removeEventListener(
-        'mouseover',
-        handleMouseOver
-      )
-    }
-  }, [])
+  const isHomePage =
+    currentPath === basePath ||
+    currentPath === basePath.replace(/\/$/, '')
 
 
   /* =========================================
@@ -71,11 +33,19 @@ function App() {
   ========================================= */
 
   useEffect(() => {
+
+    if (!isHomePage) {
+      return
+    }
+
+
     const handleScroll = () => {
+
       setShowHome(
         window.scrollY >
         window.innerHeight * 0.6
       )
+
     }
 
 
@@ -89,13 +59,38 @@ function App() {
 
 
     return () => {
+
       window.removeEventListener(
         'scroll',
         handleScroll
       )
-    }
-  }, [])
 
+    }
+
+  }, [isHomePage])
+
+
+  /* =========================================
+     404 PAGE
+  ========================================= */
+
+  if (!isHomePage) {
+
+    return (
+      <>
+        <NotFound />
+
+        <Cursor />
+
+      </>
+    )
+
+  }
+
+
+  /* =========================================
+     MAIN PORTFOLIO
+  ========================================= */
 
   return (
     <>
@@ -104,23 +99,14 @@ function App() {
           GLOBAL CUSTOM CURSOR
       ===================================== */}
 
-      <div
-        className={`global-cursor ${
-          cursorActive
-            ? 'cursor-active'
-            : ''
-        }`}
-        style={{
-          left: `${cursor.x}px`,
-          top: `${cursor.y}px`,
-        }}
-      >
+      <Cursor />
 
-        <div className="global-cursor-dot"></div>
 
-        <div className="global-cursor-ring"></div>
+      {/* =====================================
+          SCROLL PROGRESS
+      ===================================== */}
 
-      </div>
+      <ScrollProgress />
 
 
       {/* =====================================
@@ -161,10 +147,6 @@ function App() {
       <Projects />
 
       <Contact />
-
-      <Cursor /> 
-
-      <ScrollProgress />
 
     </>
   )

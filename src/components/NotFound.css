@@ -1,0 +1,217 @@
+/* =========================================
+   404 PAGE
+========================================= */
+
+.not-found {
+  min-height: 100vh;
+
+  position: relative;
+
+  padding: 40px 46px 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background: #0a0a0a;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.not-found-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.not-found-content {
+  width: min(900px, 90vw);
+
+  margin: auto;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.not-found-eyebrow {
+  margin-bottom: 25px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.not-found-content h1 {
+  margin: 0;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: clamp(150px, 25vw, 360px);
+
+  line-height: 0.75;
+
+  letter-spacing: -0.09em;
+
+  font-weight: 600;
+}
+
+
+.not-found-content h1 span {
+  color: #5c5c5c;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.not-found-message {
+  max-width: 420px;
+
+  margin-top: 45px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   HOME BUTTON
+========================================= */
+
+.not-found-home {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 35px;
+
+  padding: 13px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  color: rgba(255, 255, 255, 0.75);
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    padding 0.3s ease;
+}
+
+
+.not-found-home:hover {
+  background: #ffffff;
+
+  color: #0a0a0a;
+
+  padding-left: 23px;
+
+  padding-right: 23px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.not-found-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .not-found {
+    padding: 30px 22px 35px;
+  }
+
+
+  .not-found-header {
+    font-size: 8px;
+  }
+
+
+  .not-found-content {
+    width: 100%;
+  }
+
+
+  .not-found-content h1 {
+    font-size: 48vw;
+  }
+
+
+  .not-found-message {
+    max-width: 320px;
+
+    margin-top: 35px;
+
+    font-size: 14px;
+  }
+
+
+  .not-found-footer {
+    font-size: 7px;
+  }
+
+}
