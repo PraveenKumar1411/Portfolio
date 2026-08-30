@@ -1,0 +1,425 @@
+/* =========================================
+   IDENTITY SECTION
+========================================= */
+
+.identity-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 40px 46px 45px;
+
+  background: #0a0a0a;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.identity-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.identity-container {
+  width: min(1400px, 88vw);
+
+  min-height: calc(100vh - 170px);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 53% 47%;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.identity-title {
+  position: relative;
+
+  z-index: 2;
+
+  min-width: 0;
+}
+
+
+.identity-eyebrow {
+  margin-bottom: 34px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+}
+
+
+.identity-title h2 {
+  margin: 0;
+
+  max-width: 760px;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: clamp(68px, 7vw, 118px);
+
+  line-height: 0.84;
+
+  letter-spacing: -0.065em;
+
+  font-weight: 600;
+}
+
+
+.identity-title h2 span {
+  color: #5a5a5a;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.identity-content {
+  width: 100%;
+
+  max-width: 500px;
+
+  padding-left: 24px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.identity-intro {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: clamp(21px, 2vw, 29px);
+
+  line-height: 1.22;
+
+  letter-spacing: -0.025em;
+}
+
+
+.identity-text {
+  max-width: 430px;
+
+  margin-top: 28px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   METADATA
+========================================= */
+
+.identity-meta {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+
+  margin-top: 58px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.meta-item {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+
+.meta-item span {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+
+.meta-item strong {
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================
+   LARGE BACKGROUND NUMBER
+========================================= */
+
+.identity-number {
+  position: absolute;
+
+  right: -35px;
+
+  bottom: -105px;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 330px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  letter-spacing: -0.08em;
+
+  color: rgba(255, 255, 255, 0.018);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.identity-footer {
+  position: absolute;
+
+  left: 46px;
+
+  right: 46px;
+
+  bottom: 28px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .identity-container {
+    width: 90vw;
+
+    grid-template-columns: 52% 48%;
+  }
+
+
+  .identity-title h2 {
+    font-size: clamp(62px, 7vw, 100px);
+  }
+
+
+  .identity-content {
+    padding-left: 15px;
+  }
+
+
+  .identity-intro {
+    font-size: 24px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .identity-section {
+    min-height: auto;
+
+    padding: 30px 22px 80px;
+  }
+
+
+  .identity-container {
+    width: 100%;
+
+    min-height: auto;
+
+    margin-top: 90px;
+
+    display: block;
+  }
+
+
+  .identity-title h2 {
+    max-width: 100%;
+
+    font-size: clamp(58px, 11vw, 82px);
+
+    line-height: 0.85;
+  }
+
+
+  .identity-content {
+    max-width: 100%;
+
+    padding-left: 0;
+
+    margin-top: 75px;
+  }
+
+
+  .identity-intro {
+    font-size: 25px;
+  }
+
+
+  .identity-text {
+    font-size: 14px;
+  }
+
+
+  .identity-meta {
+    margin-top: 45px;
+  }
+
+
+  .identity-number {
+    right: -10px;
+
+    bottom: 10px;
+
+    font-size: 220px;
+  }
+
+
+  .identity-footer {
+    left: 22px;
+
+    right: 22px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+  .identity-header {
+    font-size: 9px;
+  }
+
+
+  .identity-container {
+    margin-top: 70px;
+  }
+
+
+  .identity-eyebrow {
+    margin-bottom: 25px;
+
+    font-size: 10px;
+  }
+
+
+  .identity-title h2 {
+    font-size: 55px;
+
+    line-height: 0.86;
+  }
+
+
+  .identity-content {
+    margin-top: 60px;
+  }
+
+
+  .identity-intro {
+    font-size: 22px;
+  }
+
+
+  .identity-text {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+
+  .identity-meta {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .identity-number {
+    font-size: 170px;
+  }
+
+
+  .identity-footer {
+    font-size: 8px;
+  }
+
+}

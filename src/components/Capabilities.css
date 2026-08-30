@@ -1,0 +1,605 @@
+/* =========================================
+   CAPABILITIES SECTION
+========================================= */
+
+.capabilities-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 40px 46px 45px;
+
+  background: #0a0a0a;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.capabilities-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.capabilities-container {
+  width: min(1400px, 88vw);
+
+  min-height: calc(100vh - 170px);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 43% 57%;
+
+  align-items: center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.capabilities-title {
+  position: relative;
+
+  z-index: 3;
+}
+
+
+.capabilities-title p {
+  margin-bottom: 30px;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+}
+
+
+.capabilities-title h2 {
+  margin: 0;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: clamp(90px, 10vw, 155px);
+
+  line-height: 0.78;
+
+  letter-spacing: -0.075em;
+
+  font-weight: 600;
+}
+
+
+.capabilities-title h2 span {
+  color: #5a5a5a;
+}
+
+
+/* =========================================
+   LIST
+========================================= */
+
+.capabilities-list {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  max-width: 850px;
+}
+
+
+/* =========================================
+   ITEM
+========================================= */
+
+.capability-item {
+  min-height: 96px;
+
+  display: grid;
+
+  grid-template-columns: 80px 1fr 40px;
+
+  align-items: center;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  cursor: pointer;
+
+  transition:
+    min-height 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.capability-item:last-child {
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.capability-number {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.05em;
+
+  transition: color 0.3s ease;
+}
+
+
+/* =========================================
+   INFO
+========================================= */
+
+.capability-info h3 {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 19px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.capability-info p {
+  max-width: 500px;
+
+  margin: 8px 0 0;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  animation: capabilityFade 0.35s ease;
+}
+
+
+@keyframes capabilityFade {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.capability-arrow {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 24px;
+
+  text-align: right;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================
+   ACTIVE
+========================================= */
+
+.capability-item.active {
+  min-height: 125px;
+
+  border-color:
+    rgba(255, 255, 255, 0.22);
+}
+
+
+.capability-item.active .capability-number {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+.capability-item.active .capability-info h3 {
+  color: #ffffff;
+
+  transform: translateX(6px);
+}
+
+
+.capability-item.active .capability-arrow {
+  color: #ffffff;
+
+  transform:
+    translate(4px, -4px);
+}
+
+
+/* =========================================
+   RADAR
+========================================= */
+
+.capability-radar {
+  position: absolute;
+
+  right: 8%;
+
+  top: 50%;
+
+  width: 300px;
+
+  height: 300px;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  opacity: 0.75;
+}
+
+
+.radar-ring {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.radar-ring-one {
+  width: 100%;
+
+  height: 100%;
+}
+
+
+.radar-ring-two {
+  width: 68%;
+
+  height: 68%;
+}
+
+
+.radar-ring-three {
+  width: 38%;
+
+  height: 38%;
+}
+
+
+/* =========================================
+   RADAR POINT
+========================================= */
+
+.radar-point {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  width: 2px;
+
+  height: 105px;
+
+  transform-origin: center bottom;
+
+  transition:
+    transform 0.7s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.radar-point span {
+  position: absolute;
+
+  top: 0;
+
+  left: 50%;
+
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  transform: translateX(-50%);
+}
+
+
+/* =========================================
+   CENTER POINT
+========================================= */
+
+.capability-radar::after {
+  content: '';
+
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.35);
+
+  transform: translate(-50%, -50%);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.capabilities-footer {
+  position: absolute;
+
+  left: 46px;
+
+  right: 46px;
+
+  bottom: 28px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .capabilities-container {
+    width: 90vw;
+
+    grid-template-columns: 40% 60%;
+  }
+
+
+  .capabilities-title h2 {
+    font-size: clamp(80px, 9vw, 125px);
+  }
+
+
+  .capability-item {
+    grid-template-columns: 60px 1fr 35px;
+  }
+
+
+  .capability-info h3 {
+    font-size: 17px;
+  }
+
+
+  .capability-radar {
+    right: 4%;
+
+    width: 250px;
+
+    height: 250px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .capabilities-section {
+    min-height: auto;
+
+    padding: 30px 22px 80px;
+  }
+
+
+  .capabilities-container {
+    width: 100%;
+
+    min-height: auto;
+
+    margin-top: 90px;
+
+    display: block;
+  }
+
+
+  .capabilities-title h2 {
+    font-size: clamp(72px, 16vw, 105px);
+  }
+
+
+  .capabilities-list {
+    margin-top: 90px;
+  }
+
+
+  .capability-item {
+    grid-template-columns: 45px 1fr 30px;
+
+    min-height: 85px;
+  }
+
+
+  .capability-item.active {
+    min-height: 115px;
+  }
+
+
+  .capability-info h3 {
+    font-size: 16px;
+  }
+
+
+  .capability-info p {
+    max-width: 90%;
+
+    font-size: 11px;
+  }
+
+
+  .capability-radar {
+    width: 220px;
+
+    height: 220px;
+
+    right: -70px;
+
+    top: 30%;
+  }
+
+
+  .capabilities-footer {
+    left: 22px;
+
+    right: 22px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+  .capabilities-header {
+    font-size: 9px;
+  }
+
+
+  .capabilities-container {
+    margin-top: 70px;
+  }
+
+
+  .capabilities-title p {
+    font-size: 10px;
+  }
+
+
+  .capabilities-title h2 {
+    font-size: 68px;
+  }
+
+
+  .capabilities-list {
+    margin-top: 65px;
+  }
+
+
+  .capability-item {
+    grid-template-columns: 35px 1fr 25px;
+  }
+
+
+  .capability-info h3 {
+    font-size: 14px;
+  }
+
+
+  .capability-arrow {
+    font-size: 20px;
+  }
+
+
+  .capability-radar {
+    width: 180px;
+
+    height: 180px;
+
+    right: -65px;
+
+    opacity: 0.45;
+  }
+
+
+  .capabilities-footer {
+    font-size: 8px;
+  }
+
+}

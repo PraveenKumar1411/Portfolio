@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HTML
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+
+  scroll-padding-top: 20px;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+  background: #0a0a0a;
+
+  color: #ffffff;
+
+  font-family: 'Inter', sans-serif;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   GLOBAL TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+  font-family: inherit;
+}
+
+
+/* =========================================
+   SECTION NAVIGATION OFFSET
+========================================= */
+
+section {
+  scroll-margin-top: 20px;
+}
+
+
+/* =========================================
+   HIDE DEFAULT CURSOR
+   Desktop only
+========================================= */
+
+@media (min-width: 769px) {
+
+  body,
+  button,
+  a,
+  .project-item,
+  .capability-item {
+    cursor: none;
+  }
+
+}
+
+
+/* =========================================
+   GLOBAL CUSTOM CURSOR
+========================================= */
+
+.global-cursor {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 42px;
+  height: 42px;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+
+  z-index: 999999;
+
+  mix-blend-mode: difference;
+
+  transition:
+    width 0.25s ease,
+    height 0.25s ease;
+}
+
+
+/* =========================================
+   CURSOR DOT
+========================================= */
+
+.global-cursor-dot {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  transform: translate(-50%, -50%);
+
+  background: #ffffff;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   CURSOR RING
+========================================= */
+
+.global-cursor-ring {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 32px;
+  height: 32px;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 50%;
+
+  transition:
+    width 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease;
+}
+
+
+/* =========================================
+   CURSOR ACTIVE
+========================================= */
+
+.global-cursor.cursor-active {
+  width: 60px;
+  height: 60px;
+}
+
+
+.global-cursor.cursor-active
+.global-cursor-ring {
+  width: 55px;
+  height: 55px;
+
+  border-color: #ffffff;
+}
+
+
+/* =========================================
+   FLOATING HOME BUTTON
+========================================= */
+
+.floating-home {
+  position: fixed;
+
+  right: 35px;
+  bottom: 35px;
+
+  width: 58px;
+  height: 58px;
+
+  z-index: 900;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 2px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 50%;
+
+  background: rgba(10, 10, 10, 0.75);
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+
+/* =========================================
+   HOME BUTTON VISIBLE
+========================================= */
+
+.floating-home.home-visible {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   HOME ARROW
+========================================= */
+
+.home-arrow {
+  font-size: 17px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+/* =========================================
+   HOME TEXT
+========================================= */
+
+.home-text {
+  font-size: 7px;
+
+  letter-spacing: 0.12em;
+
+  opacity: 0.55;
+}
+
+
+/* =========================================
+   HOME HOVER
+========================================= */
+
+.floating-home:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(255, 255, 255, 0.55);
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+
+.floating-home:hover
+.home-arrow {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SELECTION
+========================================= */
+
+::selection {
+  background: #ffffff;
+
+  color: #0a0a0a;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .global-cursor {
+    display: none;
+  }
+
+
+  .floating-home {
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 50px;
+
+    height: 50px;
+  }
+
+
+  .home-arrow {
+    font-size: 15px;
+  }
+
+
+  .home-text {
+    font-size: 6px;
+  }
+
+}

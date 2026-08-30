@@ -1,0 +1,1311 @@
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  padding: 32px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(255, 255, 255, 0.045),
+      transparent 28%
+    ),
+    #0a0a0a;
+
+  isolation: isolate;
+}
+
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 0%,
+      transparent 85%
+    );
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  z-index: 10;
+}
+
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+}
+
+
+.menu-btn {
+  background: transparent;
+  border: none;
+
+  color: #ffffff;
+
+  font-family: 'Inter', sans-serif;
+
+  font-size: 12px;
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+
+  position: relative;
+  z-index: 20;
+}
+
+
+.menu-btn span {
+  font-size: 20px;
+  margin-left: 6px;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  margin: auto 0;
+  padding-left: 8vw;
+
+  position: relative;
+  z-index: 5;
+}
+
+
+.eyebrow {
+  font-size: 12px;
+
+  letter-spacing: 0.2em;
+
+  margin-bottom: 20px;
+
+  opacity: 0.5;
+}
+
+
+.hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: clamp(80px, 13vw, 190px);
+
+  line-height: 0.82;
+
+  letter-spacing: -0.07em;
+
+  font-weight: 600;
+}
+
+
+.hero h1 span {
+  opacity: 0.35;
+}
+
+
+.role {
+  margin-top: 32px;
+
+  font-size: 13px;
+
+  letter-spacing: 0.18em;
+
+  opacity: 0.55;
+}
+
+
+.role span {
+  margin: 0 10px;
+
+  opacity: 0.4;
+}
+
+
+/* =========================================
+   ORBITAL WRAPPER
+========================================= */
+
+.orbital-wrapper {
+  position: absolute;
+
+  width: 470px;
+  height: 470px;
+
+  right: 9%;
+  top: 47%;
+
+  transform: translateY(-50%);
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   SYSTEM LABELS
+========================================= */
+
+.system-label {
+  position: absolute;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+
+  opacity: 0.28;
+
+  white-space: nowrap;
+}
+
+
+.system-label-top {
+  top: 8px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+
+.system-label-bottom {
+  bottom: 8px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+
+/* =========================================
+   ORBITAL SYSTEM
+========================================= */
+
+.orbital-system {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+}
+
+
+/* =========================================
+   ORBITS
+========================================= */
+
+.orbit {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.orbit-one {
+  width: 150px;
+  height: 150px;
+
+  animation:
+    orbitPulse 6s ease-in-out infinite;
+}
+
+
+.orbit-two {
+  width: 270px;
+  height: 270px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(55deg);
+
+  animation:
+    orbitRotateTwo 20s linear infinite;
+}
+
+
+.orbit-three {
+  width: 410px;
+  height: 410px;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(-35deg);
+
+  animation:
+    orbitRotateThree 28s linear infinite;
+}
+
+
+/* =========================================
+   SCAN ARC
+========================================= */
+
+.scan-arc {
+  position: absolute;
+
+  width: 410px;
+  height: 410px;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    rotate(0deg);
+
+  border-radius: 50%;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.35);
+
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+
+  animation:
+    scanRotate 7s linear infinite;
+}
+
+
+/* =========================================
+   CORE
+========================================= */
+
+.core {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 66px;
+  height: 66px;
+
+  transform: translate(-50%, -50%);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.22);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.06),
+      transparent 70%
+    );
+}
+
+
+.core-inner {
+  width: 34px;
+  height: 34px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+.core-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 18px rgba(255, 255, 255, 0.5);
+
+  animation:
+    corePulse 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   NODES
+========================================= */
+
+.node {
+  position: absolute;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 16px rgba(255, 255, 255, 0.35);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+
+.node span {
+  position: absolute;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.1em;
+
+  opacity: 0.35;
+
+  white-space: nowrap;
+}
+
+
+.node-one {
+  top: 30px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+
+.node-one span {
+  top: 16px;
+}
+
+
+.node-two {
+  right: 30px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+
+.node-two span {
+  right: 17px;
+}
+
+
+.node-three {
+  bottom: 65px;
+  left: 19%;
+}
+
+
+.node-three span {
+  bottom: 16px;
+  left: 0;
+}
+
+
+/* =========================================
+   DATA MARKERS
+========================================= */
+
+.data-marker {
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.65);
+}
+
+
+.marker-one {
+  top: 29%;
+  left: 25%;
+}
+
+
+.marker-two {
+  top: 72%;
+  right: 28%;
+}
+
+
+.marker-three {
+  bottom: 22%;
+  left: 51%;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes orbitPulse {
+
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+}
+
+
+@keyframes orbitRotateTwo {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(55deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(415deg);
+  }
+}
+
+
+@keyframes orbitRotateThree {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(-35deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(325deg);
+  }
+}
+
+
+@keyframes scanRotate {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+}
+
+
+@keyframes corePulse {
+
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   ENTRY ANIMATION
+========================================= */
+
+.hero-reveal {
+  opacity: 0;
+
+  animation:
+    heroReveal
+    0.9s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+.reveal-1 {
+  animation-delay: 0.15s;
+}
+
+
+.reveal-2 {
+  animation-delay: 0.3s;
+}
+
+
+.reveal-3 {
+  animation-delay: 0.55s;
+}
+
+
+.reveal-4 {
+  animation-delay: 0.2s;
+}
+
+
+@keyframes heroReveal {
+
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   HERO FOOTER
+========================================= */
+
+.hero-footer {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: end;
+
+  font-size: 10px;
+
+  letter-spacing: 0.12em;
+
+  opacity: 0.5;
+
+  position: relative;
+
+  z-index: 10;
+}
+
+
+.status-dot {
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  margin-right: 10px;
+}
+
+
+.scroll {
+  text-align: center;
+}
+
+
+.scroll span {
+  margin-left: 8px;
+
+  font-size: 16px;
+}
+
+
+.counter {
+  text-align: right;
+}
+
+
+.counter span {
+  margin: 0 5px;
+
+  opacity: 0.4;
+}
+
+
+/* =========================================
+   CUSTOM CURSOR
+========================================= */
+
+.custom-cursor {
+  position: fixed;
+
+  width: 12px;
+  height: 12px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+
+  z-index: 9999;
+
+  transition:
+    width 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.custom-cursor span {
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+}
+
+
+.custom-cursor.cursor-hover {
+  width: 42px;
+  height: 42px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+
+.custom-cursor.cursor-hover span {
+  width: 5px;
+  height: 5px;
+}
+
+
+/* =========================================
+   HIDE DEFAULT CURSOR
+========================================= */
+
+@media (min-width: 769px) {
+
+  body,
+  button,
+  a {
+    cursor: none;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .orbital-wrapper {
+    right: 2%;
+    opacity: 0.7;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 24px;
+  }
+
+
+  .hero-content {
+    padding-left: 0;
+  }
+
+
+  .hero h1 {
+    font-size: clamp(64px, 18vw, 120px);
+  }
+
+
+  .orbital-wrapper {
+    width: 280px;
+    height: 280px;
+
+    right: -80px;
+    top: 57%;
+
+    opacity: 0.3;
+  }
+
+
+  .system-label {
+    font-size: 7px;
+  }
+
+
+  .hero-footer {
+    grid-template-columns: 1fr 1fr;
+
+    row-gap: 20px;
+  }
+
+
+  .scroll {
+    text-align: right;
+  }
+
+
+  .counter {
+    display: none;
+  }
+
+
+  .custom-cursor {
+    display: none;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+ .profile-photo-wrapper {
+  position: absolute;
+
+  left: 50%;
+  top: 47%;
+
+  width: 330px;
+  height: 430px;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 4;
+
+  pointer-events: none;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+}
+
+/* =========================================
+   FULL SCREEN MENU
+========================================= */
+
+.menu-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  background: #0a0a0a;
+
+  padding: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(-20px);
+
+  transition:
+    opacity 0.45s ease,
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.45s ease;
+
+  overflow: hidden;
+}
+
+
+/* background grid */
+
+.menu-overlay::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  pointer-events: none;
+}
+
+
+/* visible */
+
+.menu-overlay.menu-visible {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   MENU TOP
+========================================= */
+
+.menu-overlay-top {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 10px;
+
+  letter-spacing: 0.14em;
+
+  opacity: 0.45;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.menu-navigation {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1000px, 90%);
+
+  margin-left: 8vw;
+}
+
+
+.menu-navigation a {
+  display: grid;
+
+  grid-template-columns: 70px 1fr 50px;
+
+  align-items: center;
+
+  min-height: 85px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    padding 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease;
+}
+
+
+.menu-navigation a:last-child {
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.menu-navigation a span {
+  font-size: 10px;
+
+  opacity: 0.3;
+}
+
+
+.menu-navigation a strong {
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: clamp(28px, 4vw, 55px);
+
+  font-weight: 500;
+
+  letter-spacing: -0.04em;
+}
+
+
+.menu-navigation a i {
+  font-style: normal;
+
+  font-size: 22px;
+
+  opacity: 0.3;
+
+  text-align: right;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.3s ease;
+}
+
+
+/* =========================================
+   MENU HOVER
+========================================= */
+
+.menu-navigation a:hover {
+  padding-left: 18px;
+}
+
+
+.menu-navigation a:hover span {
+  opacity: 0.8;
+}
+
+
+.menu-navigation a:hover i {
+  opacity: 1;
+
+  transform: translate(6px, -6px);
+}
+
+
+/* =========================================
+   MENU BOTTOM
+========================================= */
+
+.menu-overlay-bottom {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 10px;
+
+  letter-spacing: 0.14em;
+
+  opacity: 0.4;
+}
+
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+@media (max-width: 768px) {
+
+  .menu-overlay {
+    padding: 24px;
+  }
+
+
+  .menu-navigation {
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+
+  .menu-navigation a {
+    grid-template-columns: 40px 1fr 35px;
+
+    min-height: 70px;
+  }
+
+
+  .menu-navigation a strong {
+    font-size: clamp(25px, 8vw, 42px);
+  }
+
+}
+
+/* =========================================
+   CUSTOM CURSOR
+========================================= */
+
+.custom-cursor {
+  position: fixed;
+
+  left: 0;
+  top: 0;
+
+  width: 40px;
+  height: 40px;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+
+  z-index: 99999;
+
+  mix-blend-mode: difference;
+}
+
+
+/* CENTER DOT */
+
+.cursor-dot {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 6px;
+  height: 6px;
+
+  transform: translate(-50%, -50%);
+
+  background: #ffffff;
+
+  border-radius: 50%;
+}
+
+
+/* OUTER RING */
+
+.cursor-ring {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 34px;
+  height: 34px;
+
+  transform: translate(-50%, -50%);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.65);
+
+  border-radius: 50%;
+
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================
+   HOVER FEEL
+========================================= */
+
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* =========================================
+   PROFILE PHOTO
+========================================= */
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  filter:
+    grayscale(100%)
+    contrast(1.08);
+
+  opacity: 0.82;
+
+  mix-blend-mode: screen;
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.profile-photo {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: center bottom;
+
+  filter:
+    grayscale(100%)
+    contrast(1.08);
+
+  opacity: 0.9;
+
+  mix-blend-mode: screen;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
+}
+
+
+/* =========================================
+   SUBTLE GLOW
+========================================= */
+
+.profile-photo-glow {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 170px;
+  height: 170px;
+
+  transform: translate(-50%, -50%);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  filter: blur(70px);
+
+  border-radius: 50%;
+
+  opacity: 0.35;
+
+  z-index: -1;
+}
+
+.orbit {
+  z-index: 2;
+}
+
+.scan-arc {
+  z-index: 5;
+}
+
+.core {
+  z-index: 6;
+}
+
+.node {
+  z-index: 7;
+}
+
+
+.profile-photo-wrapper {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 300px;
+  height: 390px;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 4;
+
+  pointer-events: none;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Hide orbital center dot */
+.core-dot {
+  display: none;
+}
+
+.core {
+  display: none;
+}

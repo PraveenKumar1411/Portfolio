@@ -1,0 +1,691 @@
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 40px 46px 45px;
+
+  background: #0a0a0a;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.contact-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.contact-container {
+  position: relative;
+
+  width: min(1400px, 88vw);
+
+  min-height: calc(100vh - 150px);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.contact-main {
+  position: relative;
+
+  z-index: 2;
+
+  width: 62%;
+}
+
+
+.contact-eyebrow {
+  margin-bottom: 32px;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.contact-main h2 {
+  margin: 0;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: clamp(90px, 9.5vw, 165px);
+
+  line-height: 0.82;
+
+  letter-spacing: -0.07em;
+
+  font-weight: 600;
+}
+
+
+.contact-main h2 span {
+  color: #5c5c5c;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.contact-description {
+  max-width: 500px;
+
+  margin-top: 50px;
+
+  color: rgba(255, 255, 255, 0.48);
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   CONTACT LINKS
+========================================= */
+
+.contact-links {
+  width: min(820px, 100%);
+
+  margin-top: 58px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+
+/* =========================================
+   CONTACT LINK
+========================================= */
+
+.contact-link {
+  position: relative;
+
+  min-height: 76px;
+
+  display: grid;
+
+  grid-template-columns: 70px 1fr 180px 40px;
+
+  align-items: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    padding 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.3s ease;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.contact-number {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 10px;
+
+  letter-spacing: 0.1em;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.contact-name {
+  font-family: 'Space Grotesk', sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+/* =========================================
+   ACTION
+========================================= */
+
+.contact-action {
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.contact-arrow {
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 20px;
+
+  transition:
+    transform 0.35s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.contact-link:hover {
+  padding-left: 15px;
+
+  background: rgba(255, 255, 255, 0.025);
+}
+
+
+.contact-link:hover .contact-number {
+  color: #ffffff;
+}
+
+
+.contact-link:hover .contact-name {
+  transform: translateX(5px);
+}
+
+
+.contact-link:hover .contact-action {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+.contact-link:hover .contact-arrow {
+  color: #ffffff;
+
+  transform: translate(5px, -5px);
+}
+
+
+/* =========================================
+   KEYBOARD FOCUS
+========================================= */
+
+.contact-link:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.4);
+
+  outline-offset: -1px;
+}
+
+
+/* =========================================
+   ORBITAL VISUAL
+========================================= */
+
+.contact-orbit {
+  position: absolute;
+
+  right: -2%;
+
+  top: 50%;
+
+  width: 580px;
+
+  height: 580px;
+
+  transform: translateY(-50%);
+
+  opacity: 0.62;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   ORBIT RINGS
+========================================= */
+
+.contact-orbit-ring {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+
+.ring-one {
+  width: 100%;
+
+  height: 100%;
+}
+
+
+.ring-two {
+  width: 72%;
+
+  height: 72%;
+}
+
+
+.ring-three {
+  width: 44%;
+
+  height: 44%;
+}
+
+
+/* =========================================
+   ORBIT ANIMATION
+========================================= */
+
+.ring-one {
+  animation: contactRotate 35s linear infinite;
+}
+
+
+.ring-two {
+  animation: contactRotateReverse 25s linear infinite;
+}
+
+
+.ring-three {
+  animation: contactRotate 18s linear infinite;
+}
+
+
+@keyframes contactRotate {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+
+}
+
+
+@keyframes contactRotateReverse {
+
+  from {
+    transform:
+      translate(-50%, -50%)
+      rotate(360deg);
+  }
+
+  to {
+    transform:
+      translate(-50%, -50%)
+      rotate(0deg);
+  }
+
+}
+
+
+/* =========================================
+   CORE
+========================================= */
+
+.contact-orbit-core {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  width: 55px;
+
+  height: 55px;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.contact-orbit-core::before {
+  content: '';
+
+  position: absolute;
+
+  width: 30px;
+
+  height: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 50%;
+}
+
+
+.contact-orbit-core span {
+  width: 7px;
+
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 12px rgba(255, 255, 255, 0.35);
+
+  animation: corePulse 2.5s ease-in-out infinite;
+}
+
+
+@keyframes corePulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.35);
+
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.contact-footer {
+  position: absolute;
+
+  left: 46px;
+
+  right: 46px;
+
+  bottom: 28px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  z-index: 5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .contact-container {
+    width: 90vw;
+  }
+
+
+  .contact-main {
+    width: 65%;
+  }
+
+
+  .contact-main h2 {
+    font-size: clamp(80px, 10vw, 135px);
+  }
+
+
+  .contact-orbit {
+    right: -12%;
+
+    width: 500px;
+
+    height: 500px;
+
+    opacity: 0.5;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .contact-section {
+    min-height: auto;
+
+    padding: 30px 22px 80px;
+  }
+
+
+  .contact-header {
+    font-size: 9px;
+  }
+
+
+  .contact-container {
+    width: 100%;
+
+    min-height: auto;
+
+    padding-top: 100px;
+
+    padding-bottom: 110px;
+
+    display: block;
+  }
+
+
+  .contact-main {
+    width: 100%;
+  }
+
+
+  .contact-main h2 {
+    font-size: clamp(70px, 15vw, 105px);
+  }
+
+
+  .contact-description {
+    max-width: 450px;
+
+    margin-top: 40px;
+
+    font-size: 15px;
+  }
+
+
+  .contact-links {
+    margin-top: 50px;
+  }
+
+
+  .contact-link {
+    grid-template-columns: 40px 1fr 35px;
+
+    min-height: 72px;
+  }
+
+
+  .contact-action {
+    display: none;
+  }
+
+
+  .contact-orbit {
+    width: 420px;
+
+    height: 420px;
+
+    right: -190px;
+
+    top: 72%;
+
+    opacity: 0.3;
+  }
+
+
+  .contact-footer {
+    left: 22px;
+
+    right: 22px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+  .contact-main h2 {
+    font-size: 62px;
+  }
+
+
+  .contact-description {
+    max-width: 300px;
+
+    font-size: 14px;
+  }
+
+
+  .contact-links {
+    margin-top: 42px;
+  }
+
+
+  .contact-link {
+    min-height: 65px;
+  }
+
+
+  .contact-name {
+    font-size: 13px;
+  }
+
+
+  .contact-arrow {
+    font-size: 18px;
+  }
+
+
+  .contact-orbit {
+    width: 300px;
+
+    height: 300px;
+
+    right: -135px;
+
+    top: 73%;
+  }
+
+
+  .contact-footer {
+    font-size: 8px;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ring-one,
+  .ring-two,
+  .ring-three,
+  .contact-orbit-core span {
+    animation: none;
+  }
+
+}
