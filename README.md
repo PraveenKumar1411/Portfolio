@@ -1,16 +1,102 @@
-# React + Vite
+# Praveen Kumar | Developer & Creator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern personal portfolio built with React and Vite.
 
-Currently, two official plugins are available:
+This portfolio showcases my projects, technical capabilities, development journey, and ways to connect with me.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Portfolio
 
-## React Compiler
+**[Visit My Portfolio](https://praveenkumar1411.github.io/Portfolio/)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 👨‍💻 About Me
 
-## Expanding the ESLint configuration
+I'm Praveen Kumar, a developer who enjoys turning ideas into useful and engaging digital experiences.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I like understanding how things work, building applications from scratch, and continuously improving the details that make a product better to use.
+
+## 🛠️ Technologies
+
+- React
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+- Spring Boot
+- Django
+- Python
+- MySQL
+- PostgreSQL
+- Git & GitHub
+
+## 🚀 Featured Projects
+
+### 01. Student Result Portal
+
+A full-stack result management system designed for students, faculty, and administrators.
+
+**Tech Stack:** React / Spring Boot / MySQL
+
+### 02. KL Naukri
+
+A job portal experience connecting job seekers and employers through a structured web platform.
+
+**Tech Stack:** Django / Python / PostgreSQL
+
+### 03. iScoop
+
+A clean and interactive web experience focused on discovering and exploring ice cream recipes.
+
+**Tech Stack:** HTML / CSS / JavaScript
+
+### 04. Course Recommendation System
+
+A recommendation system designed to suggest relevant courses using machine learning techniques.
+
+**Tech Stack:** Python / Deep Learning
+
+> Project repository links will be added as the projects are published.
+
+## ✨ Portfolio Features
+
+- Modern dark interface
+- Responsive design
+- Custom cursor interaction
+- Smooth scrolling
+- Scroll progress indicator
+- Interactive capabilities section
+- Project showcase
+- Contact section
+- GitHub integration
+- LinkedIn integration
+- Email contact
+- GitHub Pages deployment
+
+## 📂 Project Structure
+
+```text
+Portfolio/
+├── public/
+│   ├── images/
+│   ├── favicon.svg
+│   └── icons.svg
+│
+├── src/
+│   ├── components/
+│   │   ├── Capabilities.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Cursor.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Identity.jsx
+│   │   ├── Projects.jsx
+│   │   └── ScrollProgress.jsx
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
