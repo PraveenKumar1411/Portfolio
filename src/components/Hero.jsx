@@ -306,7 +306,8 @@ function Hero() {
           DIGITAL IDENTITY
         </div>
 
-{/* =========================================
+{/* 
+=========================================
     PROFILE PHOTO
 ========================================= */}
 
@@ -315,7 +316,7 @@ function Hero() {
   <div className="profile-photo-glow"></div>
 
   <img
-    src="/images/profile.png"
+  src={`${import.meta.env.BASE_URL}images/profile.png`}
     alt="Praveen"
     className="profile-photo"
   />
