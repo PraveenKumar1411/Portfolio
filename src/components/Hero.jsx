@@ -60,6 +60,11 @@ function Hero() {
           onClick={() =>
             setMenuOpen(!menuOpen)
           }
+          aria-label={
+            menuOpen
+              ? 'Close navigation menu'
+              : 'Open navigation menu'
+          }
         >
 
           {menuOpen
@@ -98,7 +103,7 @@ function Hero() {
           </span>
 
           <span>
-            05 SECTIONS
+            06 DESTINATIONS
           </span>
 
         </div>
@@ -107,6 +112,8 @@ function Hero() {
         {/* MENU NAVIGATION */}
 
         <nav className="menu-navigation">
+
+          {/* HOME */}
 
           <a
             href="#home"
@@ -130,6 +137,8 @@ function Hero() {
           </a>
 
 
+          {/* IDENTITY */}
+
           <a
             href="#identity"
             onClick={() =>
@@ -151,6 +160,8 @@ function Hero() {
 
           </a>
 
+
+          {/* CAPABILITIES */}
 
           <a
             href="#capabilities"
@@ -174,8 +185,10 @@ function Hero() {
           </a>
 
 
+          {/* SELECTED WORK */}
+
           <a
-            href="#work"
+            href="#projects"
             onClick={() =>
               setMenuOpen(false)
             }
@@ -196,6 +209,8 @@ function Hero() {
           </a>
 
 
+          {/* CONTACT */}
+
           <a
             href="#contact"
             onClick={() =>
@@ -209,6 +224,32 @@ function Hero() {
 
             <strong>
               CONTACT
+            </strong>
+
+            <i>
+              ↗
+            </i>
+
+          </a>
+
+
+          {/* RESUME */}
+
+          <a
+            href={`${import.meta.env.BASE_URL}Praveen_Kumar_Resume.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() =>
+              setMenuOpen(false)
+            }
+          >
+
+            <span>
+              06
+            </span>
+
+            <strong>
+              RESUME
             </strong>
 
             <i>
@@ -255,6 +296,7 @@ function Hero() {
           <br />
 
           KUMAR
+
           <span>
             .
           </span>
@@ -273,6 +315,29 @@ function Hero() {
           CREATOR
 
         </p>
+
+
+        {/* =========================================
+            RESUME BUTTON
+        ========================================= */}
+
+        <a
+          href={`${import.meta.env.BASE_URL}Praveen_Kumar_Resume.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="resume-button hero-reveal reveal-3"
+          aria-label="View Praveen Kumar resume"
+        >
+
+          <span>
+            VIEW RESUME
+          </span>
+
+          <span className="resume-button-arrow">
+            ↗
+          </span>
+
+        </a>
 
       </section>
 
@@ -306,22 +371,23 @@ function Hero() {
           DIGITAL IDENTITY
         </div>
 
-{/* 
-=========================================
-    PROFILE PHOTO
-========================================= */}
 
-<div className="profile-photo-wrapper">
+        {/* =========================================
+            PROFILE PHOTO
+        ========================================= */}
 
-  <div className="profile-photo-glow"></div>
+        <div className="profile-photo-wrapper">
 
-  <img
-  src={`${import.meta.env.BASE_URL}images/profile.png`}
-    alt="Praveen"
-    className="profile-photo"
-  />
+          <div className="profile-photo-glow"></div>
 
-</div>
+          <img
+            src={`${import.meta.env.BASE_URL}images/profile.png`}
+            alt="Praveen"
+            className="profile-photo"
+          />
+
+        </div>
+
 
         {/* SCANNING ARC */}
 
@@ -343,9 +409,9 @@ function Hero() {
         <div className="orbit orbit-three"></div>
 
 
-        {/* =====================================
+        {/* =========================================
             CENTER CORE
-        ===================================== */}
+        ========================================= */}
 
         <div className="core">
 
@@ -358,9 +424,9 @@ function Hero() {
         </div>
 
 
-        {/* =====================================
+        {/* =========================================
             ORBIT NODE 01
-        ===================================== */}
+        ========================================= */}
 
         <div className="node node-one">
 
@@ -371,9 +437,9 @@ function Hero() {
         </div>
 
 
-        {/* =====================================
+        {/* =========================================
             ORBIT NODE 02
-        ===================================== */}
+        ========================================= */}
 
         <div className="node node-two">
 
@@ -384,9 +450,9 @@ function Hero() {
         </div>
 
 
-        {/* =====================================
+        {/* =========================================
             ORBIT NODE 03
-        ===================================== */}
+        ========================================= */}
 
         <div className="node node-three">
 
@@ -397,9 +463,9 @@ function Hero() {
         </div>
 
 
-        {/* =====================================
+        {/* =========================================
             DATA MARKERS
-        ===================================== */}
+        ========================================= */}
 
         <div className="data-marker marker-one"></div>
 
