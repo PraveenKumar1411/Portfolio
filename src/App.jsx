@@ -5,6 +5,8 @@ import Identity from './components/Identity'
 import Capabilities from './components/Capabilities'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import Cursor from './components/Cursor'
+import ScrollProgress from './components/ScrollProgress'
 
 function App() {
   const [cursor, setCursor] = useState({
@@ -159,6 +161,10 @@ function App() {
       <Projects />
 
       <Contact />
+
+      <Cursor /> 
+
+      <ScrollProgress />
 
     </>
   )

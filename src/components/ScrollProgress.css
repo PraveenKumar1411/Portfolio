@@ -1,0 +1,93 @@
+/* =========================================
+   SCROLL PROGRESS
+========================================= */
+
+.scroll-progress {
+  position: fixed;
+
+  top: 50%;
+
+  right: 18px;
+
+  width: 1px;
+
+  height: 120px;
+
+  transform: translateY(-50%);
+
+  background: rgba(255, 255, 255, 0.12);
+
+  z-index: 9990;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   PROGRESS FILL
+========================================= */
+
+.scroll-progress-fill {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 1px;
+
+  background: #ffffff;
+
+  transition: height 0.12s linear;
+}
+
+
+/* =========================================
+   PERCENTAGE
+========================================= */
+
+.scroll-progress-text {
+  position: absolute;
+
+  top: 50%;
+
+  right: 9px;
+
+  transform: translateY(-50%);
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  writing-mode: vertical-rl;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+}
+
+
+/* =========================================
+   SHOW ON HOVER
+========================================= */
+
+.scroll-progress:hover .scroll-progress-text {
+  opacity: 1;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .scroll-progress {
+    display: none;
+  }
+
+}

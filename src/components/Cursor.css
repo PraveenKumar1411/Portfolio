@@ -1,0 +1,129 @@
+/* =========================================
+   CUSTOM CURSOR
+========================================= */
+
+.custom-cursor {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 32px;
+  height: 32px;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+
+  z-index: 99999;
+
+  mix-blend-mode: difference;
+
+  transition:
+    width 0.25s ease,
+    height 0.25s ease;
+}
+
+
+/* =========================================
+   DOT
+========================================= */
+
+.cursor-dot {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.25s ease,
+    width 0.25s ease,
+    height 0.25s ease;
+}
+
+
+/* =========================================
+   RING
+========================================= */
+
+.cursor-ring {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 30px;
+  height: 30px;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 50%;
+
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER STATE
+========================================= */
+
+.custom-cursor.cursor-hover {
+  width: 48px;
+  height: 48px;
+}
+
+
+.custom-cursor.cursor-hover .cursor-ring {
+  width: 46px;
+  height: 46px;
+
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+
+.custom-cursor.cursor-hover .cursor-dot {
+  width: 7px;
+  height: 7px;
+
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .custom-cursor {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   TOUCH DEVICES
+========================================= */
+
+@media (hover: none) {
+
+  .custom-cursor {
+    display: none;
+  }
+
+}
